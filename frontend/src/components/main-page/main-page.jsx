@@ -18,7 +18,14 @@ export const MainPage = ({ queryPage, setQueryPage, extraClass = "" }) => {
           count: res.count,
           pages: Math.ceil(res.count / 10),
         });
-        setCards(res.results);
+        setCards(
+          res.results.map((card) => ({
+            ...card,
+            ...(card.image && {
+              image: card.image.replace("backend", "localhost"),
+            }),
+          }))
+        );
       })
       .catch((err) => {
         if (err.detail === "Invalid page.") {
