@@ -215,6 +215,9 @@ jobs:
         python -m pip install --upgrade pip 
         pip install -r ./backend/requirements.txt
     - name: Run autotests
+      env:
+        DEBUG: False
+        SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
       run: pytest
 
   send_message:
