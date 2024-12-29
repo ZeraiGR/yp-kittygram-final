@@ -22,7 +22,7 @@ export const MainPage = ({ queryPage, setQueryPage, extraClass = "" }) => {
           res.results.map((card) => ({
             ...card,
             ...(card.image && {
-              image: card.image.replace("backend", "localhost"),
+              image: card.image.replace("backend", "130.193.59.205"),
             }),
           }))
         );

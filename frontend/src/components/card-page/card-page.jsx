@@ -27,7 +27,7 @@ export const CardPage = ({ data, setData, extraClass = "" }) => {
         setData({
           ...res,
           ...(res.image && {
-            image: res.image.replace("backend", "localhost"),
+            image: res.image.replace("backend", "130.193.59.205"),
           }),
         });
 
