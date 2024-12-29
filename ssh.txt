@@ -1,0 +1,16 @@
+Your identification has been saved in /c/Users/kiril/.ssh/id_rsa
+Your public key has been saved in /c/Users/kiril/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:Utc+sO2tJ3zTLaotFERUtb2oOG6sqfwfVfaLCB3L8KM kirillgr15@mail.ru
+The key's randomart image is:
++---[RSA 4096]----+
+|         oo....  |
+|          ..   o |
+|        .oo..o. .|
+|       . .*== o .|
+|      . S..O+. o |
+|       .  *.+o. .|
+|        .E +...o.|
+|    .   oo+.o.= o|
+|     oo++o.o+= o |
++----[SHA256]-----+
