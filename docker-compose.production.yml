@@ -1,9 +1,6 @@
-version: '3.9'
-
 services:
   gateway:
-    build:
-      context: ./nginx
+    image: zeraigr/kittygram_gateway
     volumes:
       - static:/var/www/html/static
       - media:/var/www/html/media
@@ -14,8 +11,7 @@ services:
       - backend
 
   backend:
-    build:
-      context: ./backend
+    image: zeraigr/kittygram_backend
     env_file: .env
     volumes: 
       - static:/code/collected_static
@@ -24,8 +20,7 @@ services:
       - postgres
 
   frontend:
-    build:
-      context: ./frontend
+    image: zeraigr/kittygram_frontend
     volumes:
       - static:/app/build
     depends_on:
