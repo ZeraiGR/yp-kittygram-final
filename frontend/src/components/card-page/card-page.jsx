@@ -24,12 +24,7 @@ export const CardPage = ({ data, setData, extraClass = "" }) => {
   React.useEffect(() => {
     getCard(params.id).then((res) => {
       if (res && res.id) {
-        setData({
-          ...res,
-          ...(res.image && {
-            image: res.image.replace("backend", "130.193.59.205"),
-          }),
-        });
+        setData(res);
 
         let resString = "";
         res.achievements.forEach((item) => {

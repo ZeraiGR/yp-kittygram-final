@@ -104,7 +104,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static') 
 
-MEDIA_URL = '/media/'
+MEDIA_HOST = os.getenv('MEDIA_HOST')
+MEDIA_URL = f'http://{MEDIA_HOST}/media/' # по дефолту хост ставится http://backend/, что не очень подходит, хочется больше гибкости
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
