@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["pypy3.10", "3.9", "3.10"]
+        python-version: ["3.9", "3.10"]
 
     services:
       postgres:
@@ -203,7 +203,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["pypy3.10", "3.9", "3.10"]
+        python-version: ["3.9", "3.10"]
 
     needs: 
       - deploy
